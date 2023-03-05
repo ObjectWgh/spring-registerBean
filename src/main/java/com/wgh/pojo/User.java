@@ -7,6 +7,6 @@ package com.wgh.pojo;
  **/
 public class User {
     public User() {
-        System.out.println("通过无参构造实例化...");
+        System.out.println("通过无参构造实例化User ...");
     }
 }
