@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
  *
  *       通过配置BeanDefinition信息来动态注册Bean (BeanFactory后置处理器)
  **/
+@SuppressWarnings("ALL")
 @Component
 public class MyPostProcessor implements BeanDefinitionRegistryPostProcessor {
     @Override
@@ -24,7 +25,7 @@ public class MyPostProcessor implements BeanDefinitionRegistryPostProcessor {
         //获取BeanDefinition 设置Bean信息
         BeanDefinition beanDefinition = new RootBeanDefinition();
         beanDefinition.setBeanClassName("com.wgh.pojo.User");
-        //这样设置则通过getBean(""user")获取的实例是Person
+        //TODO 这样设置则通过getBean(""user")获取的实例是Person
         //beanDefinition.setBeanClassName("com.wgh.pojo.Person");
         registry.registerBeanDefinition("user", beanDefinition);
     }

@@ -17,5 +17,7 @@ public class TestRegisterBean {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
         Object user = context.getBean("user");
         System.out.println(user);
+        Object person = context.getBean("person");
+        System.out.println(person);
     }
 }
