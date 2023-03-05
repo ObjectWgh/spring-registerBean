@@ -24,6 +24,8 @@ public class MyPostProcessor implements BeanDefinitionRegistryPostProcessor {
         //获取BeanDefinition 设置Bean信息
         BeanDefinition beanDefinition = new RootBeanDefinition();
         beanDefinition.setBeanClassName("com.wgh.pojo.User");
+        //这样设置则通过getBean(""user")获取的实例是Person
+        //beanDefinition.setBeanClassName("com.wgh.pojo.Person");
         registry.registerBeanDefinition("user", beanDefinition);
     }
 
